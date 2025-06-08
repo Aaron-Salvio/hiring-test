@@ -1,4 +1,4 @@
-# SiteHost Challenge - Submission Introduction
+# SiteHost Challenge - Hiring Test
 
 Firstly, thank you for the opportunity to take part in this challenge. Below are my completed solutions for both Part 1 and Part 2.
 
