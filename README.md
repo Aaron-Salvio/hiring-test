@@ -1,6 +1,6 @@
 # SiteHost Challenge - Hiring Test
 
-Firstly, thank you for the opportunity to take part in this challenge. Below are my completed solutions for both Part 1 and Part 2.
+Firstly, thank you for the opportunity to take part in this challenge. These are my best attempt to solve Part 1 and 2.
 
 ---
 
