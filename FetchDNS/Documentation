@@ -1,0 +1,62 @@
+DNS Domain and Zone Fetcher Script
+
+Overview
+This Python script connects to the Recruitment API to retrieve a list of registered domains and their associated DNS zones for a specific customer. It then fetches and displays the DNS records for each zone.
+The API used is: https://api.recruitment.shq.nz
+
+Features
+-- Retrieves all domains for a given client ID
+-- Extracts DNS zones for each domain
+-- Parses zone IDs from zone URIs
+-- Retrieves and displays DNS records for each zone
+-- Handles missing or malformed data gracefully with clear warnings
+
+Requirements
+-- Python 3.x
+-- Standard libraries only (requests library is used for HTTP calls)
+
+Usage
+
+1. Clone or download the script.
+2. Make sure you have Python 3 installed.
+3. Install the requests package if you don’t have it already:
+
+    bash
+        pip install requests
+
+4. Update the script with your API key and client ID if different from the default:
+
+    API_KEY = "h523hDtETbkJ3nSJL323hjYLXbCyDaRZ"
+    CLIENT_ID = 100 (Business Systems International)
+
+5. Run the script:
+
+    bash
+        python fetch_dns.py
+
+How It Works
+-- Calls /domains/{client_id}?api_key=API_KEY to get a list of domains and zones.
+-- For each domain, it iterates over zones, extracting the zone ID from the uri field (e.g., /zones/1).
+-- Calls /zones/{zone_id}?api_key=API_KEY to retrieve DNS records for that zone.
+-- Prints domain names, zone details, and DNS records to the console.
+
+Error Handling
+-- If a zone object lacks a parsable ID, the script warns and skips that zone.
+-- Network or API errors will raise exceptions with a traceback (can be improved by adding try-except blocks).
+
+Example Output
+yaml
+📦 Domain: shq.nz
+  🔍 Zone: recruitment.shq.nz (Zone ID: 1)
+    • DNS Record: A - 192.168.1.1
+    • DNS Record: MX - mail.shq.nz
+  🔍 Zone: wal.shq.nz (Zone ID: 2)
+    • DNS Record: CNAME - some.other.domain
+...
+
+Future Improvements
+-- Add robust error handling with retries
+-- Support command-line arguments for API key and client ID
+-- Format output as JSON or write to a file
+-- Add unit tests
+
