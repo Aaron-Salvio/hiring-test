@@ -1,4 +1,4 @@
-Hi Alice,
+Hello Alice,
 
 Thanks for getting in touch.
 
@@ -16,6 +16,6 @@ To confirm I was able to reach the site another way, I found this code in the pa
 `SHF1ZzYwcVJDdVFVb3hFOVFBc2FaU3lVZjhnRFpoYXZPOWt5clRVY1dBPT0=`
 
 Hope this helps! Let me know if you need anything else.
-
+        
 Best,  
 Aaron
